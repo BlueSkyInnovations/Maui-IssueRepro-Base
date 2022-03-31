@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="MauiIssueReproBase.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiIssueReproBase"
+    xmlns:viewmodels="clr-namespace:MauiIssueReproBase.ViewModels"
+    xmlns:views="clr-namespace:MauiIssueReproBase.Views"
+    x:DataType="viewmodels:ShellViewModel">
+
+    <TabBar>
+        <Tab Title="{Binding Home.Title}" Icon="{Binding Home.Icon}">
+            <ShellContent ContentTemplate="{DataTemplate views:HomeView}" Route="home" />
+        </Tab>
+        <Tab Title="{Binding About.Title}" Icon="{Binding About.Icon}">
+            <ShellContent ContentTemplate="{DataTemplate views:AboutView}" Route="about" />
+        </Tab>
+    </TabBar>
+</Shell>
