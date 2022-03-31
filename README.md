@@ -2,7 +2,7 @@
 Base .NET MAUI Shell Application meant for reproducing issues
 
 # Introduction
-While working with .NET MAUI, we experienced a lot of issues. Looking at the reported issues within the .NET MAUI repository helps a lot. But sometimes it is necessary to report an issue ourselves. Of course we are aware of the fact that sometimes an issue could arise from its circumstances. Out apps are based on AppShell for instance. Also we are using the integrated dependency injection, sometimes Font Icons as well as other stuff.
+While working with .NET MAUI, we experienced a lot of issues. Looking at the reported issues within the .NET MAUI repository helps a lot. But sometimes it is necessary to report an issue ourselves. Of course we are aware of the fact that sometimes an issue could arise from its circumstances. Our apps are based on AppShell for instance. Also we are using the integrated dependency injection, sometimes Font Icons as well as other stuff.
 
 So we created a base .NET MAUI Shell Application that includes most of our specific development strategies to be used in case we need to provide a repository that shows how to reproduce an issue we may have found.
 
