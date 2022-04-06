@@ -8,15 +8,16 @@
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
-
+		
 		<!-- Display name -->
 		<ApplicationTitle>Home</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.MauiIssueReproBase</ApplicationId>
+		<ApplicationId Condition="$(TargetFramework.Contains('-windows'))">E1ED1C67-5013-4ACF-9DE2-35D6AD4BD506</ApplicationId>
 
 		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- Required for C# Hot Reload -->
@@ -46,12 +47,6 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
-		<!-- Required - WinUI does not yet have buildTransitive for everything -->
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
-	</ItemGroup>
-
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\fa-brands-400.ttf" />
 	  <None Remove="Resources\Fonts\fa-regular-400.ttf" />
@@ -63,7 +58,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0-preview2" />
+	  <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -83,10 +78,5 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
-
-	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
-		<OutputType>WinExe</OutputType>
-		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
-	</PropertyGroup>
 	
 </Project>

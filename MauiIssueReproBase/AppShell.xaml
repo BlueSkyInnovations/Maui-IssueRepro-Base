@@ -8,6 +8,35 @@
     xmlns:views="clr-namespace:MauiIssueReproBase.Views"
     x:DataType="viewmodels:ShellViewModel">
 
+
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle"  TargetType="Element">
+                <Setter Property="Shell.NavBarIsVisible"
+                        Value="True" />
+                             
+                <Setter Property="Shell.TitleColor"
+                        Value="{AppThemeBinding Dark={StaticResource PrimaryLight},Light={StaticResource White}}" />
+                <Setter Property="Shell.BackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource Dark},Light={StaticResource PrimaryColor}}" />
+                <Setter Property="Shell.ForegroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource PrimaryLight},Light={StaticResource PrimaryColor}}" />
+                
+                <Setter Property="Shell.TabBarUnselectedColor"
+                        Value="{AppThemeBinding Dark={StaticResource Grey2},Light={StaticResource Grey6}}" />
+                <Setter Property="Shell.TabBarTitleColor"
+                        Value="{StaticResource White}" />               
+                <Setter Property="Shell.TabBarForegroundColor"
+                        Value="{StaticResource PrimaryLight}" />
+                <Setter Property="Shell.TabBarBackgroundColor"
+                        Value="{AppThemeBinding Dark={StaticResource PrimaryDark},Light={StaticResource PrimaryColor}}" />
+            </Style>
+
+            <Style BasedOn="{StaticResource BaseStyle}" TargetType="TabBar" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
     <TabBar>
         <Tab Title="{Binding Home.Title}" Icon="{Binding Home.Icon}">
             <ShellContent ContentTemplate="{DataTemplate views:HomeView}" Route="home" />

@@ -6,11 +6,28 @@
     <Application.Resources>
         <ResourceDictionary>
 
+            <Color x:Key="Black">#000000</Color>
+            <Color x:Key="Dark">#1F1F1F</Color>
             <Color x:Key="PrimaryColor">#512bdf</Color>
+            <Color x:Key="PrimaryLight">#E8EFFF</Color>
+            <Color x:Key="PrimaryDark">#1B3147</Color>
             <Color x:Key="SecondaryColor">White</Color>
+            <Color x:Key="PrimaryExtraLight">#FCF2F7</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="Grey1">#FAF9F8</Color>
+            <Color x:Key="Grey2">#F3F2F1</Color>
+            <Color x:Key="Grey3">#EDEBE9</Color>
+            <Color x:Key="Grey4">#D2D0CE</Color>
+            <Color x:Key="Grey5">#C8C6C4</Color>
+            <Color x:Key="Grey6">#A19F9D</Color>
+            <Color x:Key="Grey7">#605E5C</Color>
+            <Color x:Key="Grey8">#3B3A39</Color>
+            <Color x:Key="Grey9">#323130</Color>
+            <Color x:Key="Grey0">#979797</Color>
+            
 
             <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource PrimaryLight},Light={StaticResource PrimaryColor}}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
             </Style>
 

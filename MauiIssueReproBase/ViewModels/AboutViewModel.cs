@@ -1,19 +1,28 @@
-﻿namespace MauiIssueReproBase.ViewModels;
+﻿using Command = MvvmHelpers.Commands.Command;
 
-public partial class AboutViewModel : BaseViewModel
+namespace MauiIssueReproBase.ViewModels;
+
+public class AboutViewModel : BaseViewModel
 {
     int count = 0;
-
-	[ObservableProperty]
+		
 	string counterLabelText = "Current count: 0";
+
+	public string CounterLabelText
+    {
+		get => counterLabelText;
+		set => SetProperty(ref counterLabelText, value);
+    }
+
+	public ICommand OnCounterClickedCommand { get; }
 
     public AboutViewModel()
     {
 		Title = "About";
+		OnCounterClickedCommand = new Command(OnCounterClicked);
     }
-
-    [ICommand]
-	void OnCounterClicked()
+    
+	private void OnCounterClicked()
 	{
 		count++;
 		CounterLabelText = $"Current count: {count}";

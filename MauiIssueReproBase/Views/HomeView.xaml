@@ -5,8 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:vm="clr-namespace:MauiIssueReproBase.ViewModels"
     Title="{Binding Title}"
-    x:DataType="vm:HomeViewModel"
-    BackgroundColor="{DynamicResource SecondaryColor}">
+    x:DataType="vm:HomeViewModel">
 
     <StackLayout>
         <Label

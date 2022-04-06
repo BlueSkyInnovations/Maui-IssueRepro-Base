@@ -4,8 +4,8 @@ global using MauiIssueReproBase.ViewModels;
 
 global using MauiIssueReproBase.Code.Extensions;
 
-global using CommunityToolkit.Mvvm.ComponentModel;
-global using CommunityToolkit.Mvvm.Input;
+global using MvvmHelpers;
+global using MvvmHelpers.Commands;
 
 global using System.Windows.Input;
 
